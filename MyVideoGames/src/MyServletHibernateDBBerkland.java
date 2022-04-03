@@ -23,8 +23,8 @@ public class MyServletHibernateDBBerkland extends HttpServlet {
       response.setContentType("text/html");
 
       // #1
-      UtilDBBerkland.createVideoGames("user3", "33","402.111.2222");
-      UtilDBBerkland.createVideoGames("user4", "44","402.222.3333");
+      UtilDBBerkland.createVideoGames("GTA V", "2013","$20");
+      UtilDBBerkland.createVideoGames("Minecraft", "2009","$25.99");
       
       // #2
       retrieveDisplayData(response.getWriter());
@@ -42,14 +42,14 @@ public class MyServletHibernateDBBerkland extends HttpServlet {
       out.println("<ul>");
       List<VideoGame> listVideoGames = UtilDBBerkland.listVideoGames();
       out.println("<table border=\"1\"><tr><td>ID</td><td>Name</td><td>Year</td><td>Price</td></tr>");
-      for (VideoGame employee : listVideoGames) {
-         System.out.println("[DBG] " + employee.getId() + ", " //
-               + employee.getName() + ", " //
-               + employee.getYear() + ", " + employee.getPrice());
+      for (VideoGame videoGame : listVideoGames) {
+         System.out.println("[DBG] " + videoGame.getId() + ", " //
+               + videoGame.getName() + ", " //
+               + videoGame.getYear() + ", " + videoGame.getPrice());
 
-         out.println("<tr><td>" + employee.getId() + "</td><td>" //
-               + employee.getName() + "</td><td>" //
-               + employee.getYear() + "</td><td>" + employee.getPrice() + "</td></tr>");
+         out.println("<tr><td>" + videoGame.getId() + "</td><td>" //
+               + videoGame.getName() + "</td><td>" //
+               + videoGame.getYear() + "</td><td>" + videoGame.getPrice() + "</td></tr>");
       }
       out.println("</table>");
       out.println("</body></html>");

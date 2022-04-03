@@ -26,14 +26,14 @@ public class SimpleInsertHB extends HttpServlet implements Info {
 
       response.setContentType("text/html");
       PrintWriter out = response.getWriter();
-      String title = "Database Result";
+      String title = "Your Added Game Information";
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n"; //
       out.println(docType + //
             "<html>\n" + //
             "<head><title>" + title + "</title></head>\n" + //
             "<body bgcolor=\"#f0f0f0\">\n" + //
             "<h1 align=\"center\">" + title + "</h1>\n");
-      out.println("<table border=\"1\"><tr><td>Name</td><td>Age</td><td>Phone</td></tr><tr>");
+      out.println("<table border=\"1\"><tr><td>Name</td><td>Year</td><td>Price</td></tr><tr>");
       out.println("<td>" + gameName + "</td>");
       out.println("<td>" + year + "</td>");
       out.println("<td>" + price + "</td>");

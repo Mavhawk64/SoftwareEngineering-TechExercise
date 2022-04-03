@@ -7,7 +7,7 @@ import java.util.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.*;
+//import org.hibernate.service.*;
 
 import datamodel.VideoGame;
 
